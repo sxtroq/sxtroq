@@ -1,0 +1,248 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Sxtroq Universal Hub",
+   Icon = 0,
+   LoadingTitle = "SXtroq",
+   LoadingSubtitle = "Made by Zofi",
+   Theme = "Default",
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false,
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil,
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "F5pq3AsSQH",
+      RememberJoins = true
+   },
+   KeySystem = true,
+   KeySettings = {
+      Title = "SXtroq | Key System",
+      Subtitle = "Entre no discord para a key!",
+      Note = "discord.gg/F5pq3AsSQH",
+      FileName = "filekeyXDDD",
+      SaveKey = true,
+      GrabKeyFromSite = true,
+      Key = {"https://pastebin.com/raw/NgAySdpL"}
+   }
+})
+
+local PlayerTab = Window:CreateTab("Player", 4483362458) -- Title, Image
+
+-- Slider de Velocidade
+local SpeedSlider = PlayerTab:CreateSlider({
+   Name = "Velocidade",
+   Range = {10, 100},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 10,
+   Flag = "SpeedSlider",
+   Callback = function(Value)
+      local player = game.Players.LocalPlayer
+      if player.Character and player.Character:FindFirstChild("Humanoid") then
+         player.Character.Humanoid.WalkSpeed = Value -- Define a velocidade do jogador
+      end
+   end,
+})
+
+-- Slider de Pulo
+local PuloSlider = PlayerTab:CreateSlider({
+   Name = "Pulo",
+   Range = {50, 300},
+   Increment = 1,
+   Suffix = "Pulo",
+   CurrentValue = 50,
+   Flag = "PuloSlider",
+   Callback = function(Value)
+      local player = game.Players.LocalPlayer
+      if player.Character and player.Character:FindFirstChild("Humanoid") then
+         player.Character.Humanoid.JumpPower = Value -- Define o Pulo do jogador
+      end
+   end,
+})
+
+-- Botão Destroy Hub
+local DestroyButton = PlayerTab:CreateButton({
+   Name = "Destroy Hub",
+   Callback = function()
+      Rayfield:Destroy() -- Destrói o Rayfield quando o botão é pressionado
+   end,
+})
+
+-- Nova aba: Universal
+local UniversalTab = Window:CreateTab("Universal", 4483362458) -- Title, Image (mesmo ícone que Player)
+
+-- Botão para Infinite Yield
+local InfiniteYieldButton = UniversalTab:CreateButton({
+   Name = "Infinite Yield",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() -- Executa o script do Infinite Yield
+   end,
+})
+
+-- Botão para Fake Lag
+local FakeLagButton = UniversalTab:CreateButton({
+   Name = "Fake Lag",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Biem6ondo/FAKELAG/refs/heads/main/Fakelag"))() -- Executa o script de Fake Lag
+   end,
+})
+
+-- Botão para sUNC
+local sUNCButton = UniversalTab:CreateButton({
+   Name = "sUNC",
+   Callback = function()
+      loadstring(game:HttpGet("https://gitlab.com/sens3/nebunu/-/raw/main/HummingBird8's_sUNC_yes_i_moved_to_gitlab_because_my_github_acc_got_brickedd/sUNCm0m3n7.lua"))() -- Executa o script de sUNC
+   end,
+})
+
+-- Botão para UNC
+local UNCButton = UniversalTab:CreateButton({
+   Name = "UNC",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua", true))() -- Executa o script de UNC
+   end,
+})
+
+-- Botão para ChatBot
+local ChatBotButton = UniversalTab:CreateButton({
+   Name = "ChatBot",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Guerric9018/chatbothub/main/ChatbotHub.lua"))() -- Executa o script do ChatBot
+   end,
+})
+
+-- Nova aba: Bedwars
+local BedwarsTab = Window:CreateTab("Bedwars", 4483362458) -- Title, Image (mesmo ícone que os outros)
+
+-- Botão para Vape V4
+local VapeV4Button = BedwarsTab:CreateButton({
+   Name = "Vape V4",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))() -- Executa o script do Vape V4
+   end,
+})
+
+-- Botão para Aurora
+local AuroraButton = BedwarsTab:CreateButton({
+   Name = "Aurora",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/cocotv666/Aurora/refs/heads/main/Aurora_Loader'))() -- Executa o script do Aurora
+   end,
+})
+
+-- Botão para Voidware
+local VoidwareButton = BedwarsTab:CreateButton({
+   Name = "Voidware",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua", true))() -- Executa o script do Voidware
+   end,
+})
+
+-- Nova aba: MM2
+local MM2Tab = Window:CreateTab("MM2", 4483362458) -- Title, Image (mesmo ícone que os outros)
+
+-- Botão para XHUB
+local XHUBButton = MM2Tab:CreateButton({
+   Name = "XHUB",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))() -- Executa o script do XHUB
+   end,
+})
+
+-- Botão para Meow Hub Private
+local MeowHubButton = MM2Tab:CreateButton({
+   Name = "Meow Hub Private",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/testikwatafak/-ProstoHub/main/ProstoHub", true))() -- Executa o script do Meow Hub Private
+   end,
+})
+
+-- Botão para YARHM
+local YARHMButton = MM2Tab:CreateButton({
+   Name = "YARHM",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", false))() -- Executa o script do YARHM
+   end,
+})
+
+-- Botão para Auto Farm Key System
+local AutoFarmButton = MM2Tab:CreateButton({
+   Name = "Auto Farm Key System",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconBossScript/BeeconHub/main/BeeconHub"))() -- Executa o script do Auto Farm Key System
+   end,
+})
+
+-- Nova aba: Bridge Duel
+local BridgeDuelTab = Window:CreateTab("Bridge Duel", 4483362458) -- Title, Image (mesmo ícone que os outros)
+
+-- Botão para Aurora
+local AuroraButton = BridgeDuelTab:CreateButton({
+   Name = "Aurora",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/Aurora/main/Aurora_Loader"))() -- Executa o script do Aurora
+   end,
+})
+
+-- Botão para PyIon
+local PyIonButton = BridgeDuelTab:CreateButton({
+   Name = "PyIon",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/55zay16/Pylon/refs/heads/main/main.lua"))() -- Executa o script do PyIon
+   end,
+})
+
+-- Botão para Lime
+local LimeButton = BridgeDuelTab:CreateButton({
+   Name = "Lime",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/AfgMS/LimeForRoblox/refs/heads/main/Loader.lua"))() -- Executa o script do Lime
+   end,
+})
+
+-- Nova aba: Blox Fruits
+local BloxFruitsTab = Window:CreateTab("Blox Fruits", 4483362458) -- Title, Image (mesmo ícone que os outros)
+
+-- Botão para Kncrypt
+local KncryptButton = BloxFruitsTab:CreateButton({
+   Name = "Kncrypt",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/sources/BloxFruit.lua"))() -- Executa o script do Kncrypt
+   end,
+})
+
+-- Botão para Speed X Hub
+local SpeedXHubButton = BloxFruitsTab:CreateButton({
+   Name = "Speed X Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- Executa o script do Speed X Hub
+   end,
+})
+
+-- Botão para Hoho Hub
+local HohoHubButton = BloxFruitsTab:CreateButton({
+   Name = "Hoho Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))() -- Executa o script do Hoho Hub
+   end,
+})
+
+-- Botão para W-Azure
+local WAzureButton = BloxFruitsTab:CreateButton({
+   Name = "W-Azure",
+   Callback = function()
+      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))() -- Executa o script do W-Azure
+   end,
+})
+
+-- Botão para REDz Hub
+local REDzHubButton = BloxFruitsTab:CreateButton({
+   Name = "REDz Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))() -- Executa o script do REDz Hub
+   end,
+})
