@@ -30,6 +30,8 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
+setclipboard("https://discord.gg/F5pq3AsSQH") -- Copia o link do Discord para a área de transferência
+
 local PlayerTab = Window:CreateTab("Player", 4483362458) -- Title, Image
 
 -- Slider de Velocidade
@@ -211,38 +213,4 @@ local BloxFruitsTab = Window:CreateTab("Blox Fruits", 4483362458) -- Title, Imag
 local KncryptButton = BloxFruitsTab:CreateButton({
    Name = "Kncrypt",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/sources/BloxFruit.lua"))() -- Executa o script do Kncrypt
-   end,
-})
-
--- Botão para Speed X Hub
-local SpeedXHubButton = BloxFruitsTab:CreateButton({
-   Name = "Speed X Hub",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- Executa o script do Speed X Hub
-   end,
-})
-
--- Botão para Hoho Hub
-local HohoHubButton = BloxFruitsTab:CreateButton({
-   Name = "Hoho Hub",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))() -- Executa o script do Hoho Hub
-   end,
-})
-
--- Botão para W-Azure
-local WAzureButton = BloxFruitsTab:CreateButton({
-   Name = "W-Azure",
-   Callback = function()
-      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))() -- Executa o script do W-Azure
-   end,
-})
-
--- Botão para REDz Hub
-local REDzHubButton = BloxFruitsTab:CreateButton({
-   Name = "REDz Hub",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))() -- Executa o script do REDz Hub
-   end,
-})
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Kncrypt/refs/heads/main/sources/BloxFruit.lua"))() -- Executa
